@@ -16,3 +16,7 @@ Adding first template and removing the restriction of `int` only
 ### But why does it have to be ascending order
 
 Adding another template for ordering
+
+### Why the operator()
+
+Short discussion why the `operator()` was used to implement comparators in toy examples
