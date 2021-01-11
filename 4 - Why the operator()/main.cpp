@@ -24,20 +24,12 @@ private:
     }
 };
 
-template <class T>
-void printVector(const std::vector<T>& a) {
-    for(unsigned i = 0; i < a.size(); ++i) {
-        std::cout << a[i] << ' ';
-    }
-    std::cout << std::endl;
-}
-
 int main() {
     std::vector<int> x{ 21, 11, 10000, 35, 43, 111 };
 
     // priority queue whose top element is some number written with most digits (in decimal)
     std::priority_queue<int, std::vector<int>, decimalDigitsOrdering> pq(x.begin(), x.end());
-    std::cout << pq.top() << std::endl;
+    std::cout << "Top element for a priority queue with decimal-digits ordering: " << pq.top() << std::endl;
 
     // ordered set usng `<` operator to order
     std::set<int, std::less<int>> numbers(x.begin(), x.end());
@@ -45,7 +37,5 @@ int main() {
     auto lb = numbers.lower_bound(21);
     auto ub = numbers.upper_bound(21);
     std::cout << "Lower & upper bound of 21: " << *lb << ' ' << *ub << std::endl;
-
-    printVector(x);
     return 0;
 }
