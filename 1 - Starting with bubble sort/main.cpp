@@ -30,7 +30,7 @@ void printSortPrint(std::vector<int>& a) {
 
 
 int main() {
-    std::vector<int> vec{ 37, 9, 100, 13 };
+    std::vector<int> vec{ 37, 9, 100, 13, 51 };
     printSortPrint(vec);
     return 0;
 }
